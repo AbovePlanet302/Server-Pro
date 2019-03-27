@@ -242,4 +242,4 @@ bot.on("message", async message => {
 
 
 
-bot.login(proess.env.token);
+bot.login(process.env.token);
