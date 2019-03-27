@@ -10,6 +10,10 @@ const bot = new Discord.Client();
 
 bot.commands = new Discord.Collection();
 
+let coins = require("./coins.json");
+
+let xp = require("./xp.json");
+
 let purple = botconfig.purple;
 
 let cooldown = new Set();
@@ -50,13 +54,13 @@ fs.readdir("./commands/", (err, files) => {
 
 
 
-bot.on("idle", async () => {
+bot.on("ready", async () => {
 
 
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
-  bot.user.setActivity(`${bot.guilds.size} Servers! | v0.0.3`, {type: "WATCHING"});
+  bot.user.setActivity("tutorials on TSC", {type: "WATCHING"});
 
 
 
