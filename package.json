@@ -1,0 +1,20 @@
+{
+  "name": "chillzone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cheerbear",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "djs-commands": "^1.2.2",
+    "heroku": "^7.22.7",
+    "local": "^0.3.3",
+    "nodemon": "^1.18.10",
+    "nodeom": "0.0.1",
+    "web": "0.0.2"
+  }
+}
