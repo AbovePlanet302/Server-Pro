@@ -239,8 +239,16 @@ bot.on("message", async message => {
     cooldown.delete(message.author.id)
 
   }, cdseconds * 1000)
+  client.on('guildCreate', (guild) => {
 
+let embed = new Discord.RichEmbed()
+    .setColor('#0099ff')
+    .setTitle('New Server Join')
+    .setTimestamp()
+    .addField("Server Owner", message.guild.owner)
+    .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
 
+    guild.channels.get("616805846390669334").send(embed); 
 
 });
 
