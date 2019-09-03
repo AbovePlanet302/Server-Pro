@@ -28,7 +28,8 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Crystal Development", {type: "WATCHING"})
+  bot.user.setActivity("tutorials on TSC", {type: "WATCHING"});
+
 });
 
 bot.on("guildCreate", (guild) => {
@@ -117,7 +118,7 @@ bot.on("message", async message => {
     .setColor(purple)
     .addField("New Level", curlvl + 1);
 
-    message.channel.send(lvlup).then(msg => {msg.delete(10)});
+    message.channel.send(lvlup).then(msg => {msg.delete(5000)});
   }
   fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
     if(err) console.log(err)
@@ -144,9 +145,7 @@ bot.on("message", async message => {
     cooldown.delete(message.author.id)
   }, cdseconds * 1000)
 
-  if (message.content === `${prefix}user-info`) {
-    message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
-  }
 });
 
-bot.login("process.env.BOT_TOKEN");
+bot.login(process.env.BOT_TOKEN);
+
