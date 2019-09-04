@@ -49,7 +49,7 @@ bot.on("guildMemberAdd", (guild) => {
   .setColor('#424242')
   .setTitle("New Member Join")
   .setTimestamp()
-  .addField("Server Owner", guild.owner.user.username)
+  .addField("Server Owner", "New Member")
   .addField("Name", guild.name)
   .addField("ID", guild.id);
 
