@@ -44,7 +44,7 @@ bot.on("guildCreate", (guild) => {
   bot.channels.get("618100297230712875").send(embed);
 });
 
-bot.on("memberCreate", (guild) => {
+bot.on("guildMemberAdd", (guild) => {
   let embed = new Discord.RichEmbed()
   .setColor('#424242')
   .setTitle("New Member Join")
