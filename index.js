@@ -44,6 +44,18 @@ bot.on("guildCreate", (guild) => {
   bot.channels.get("618100297230712875").send(embed);
 });
 
+bot.on("memberCreate", (guild) => {
+  let embed = new Discord.RichEmbed()
+  .setColor('#424242')
+  .setTitle("New Member Join")
+  .setTimestamp()
+  .addField("Server Owner", guild.owner.user.username)
+  .addField("Name", guild.name)
+  .addField("ID", guild.id);
+
+  bot.channels.get("618100297230712875").send(embed);
+});
+
 bot.on("guildDelete", (guild) => {
   let embed = new Discord.RichEmbed()
   
